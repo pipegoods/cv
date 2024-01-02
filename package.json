@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "astro": "^4.0.9"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.0"
   }
 }
