@@ -45,3 +45,4 @@ Te recomiendo desplegar tu CV en Vercel, ya que está optimizado para Astro. Ade
 - [ ] i18n (Internacionalización)
 - [ ] Mejorar aspecto SEO
 - [ ] Print Friendly
+- [ ] Agregar más redes sociales
