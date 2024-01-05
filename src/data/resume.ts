@@ -3,7 +3,7 @@ import type { Resume } from '../types/resume';
 export const RESUME: Resume = {
   basics: {
     name: 'Andrés Vizcaíno Salazar',
-    label: 'Full Stack Developer',
+    label: 'Full Stack Web Developer',
     email: 'pipe.jaider@gmail.com',
     url: 'https://andresvizcaino.com',
     image: '/photo-andres-vizcaino.webp',
@@ -22,27 +22,60 @@ export const RESUME: Resume = {
         username: 'pipegoods',
         url: 'https://github.com/pipegoods',
       },
+      {
+        network: 'X',
+        username: 'pipegoods',
+        url: 'https://twitter.com/pipegoods',
+      },
     ],
     summary:
-      "I'm a Full Stack Developer with 5+ years of experience in the industry. I have worked with different technologies and frameworks, but I'm always looking to learn new things. I'm a team player and I like to work in a collaborative environment.",
+      'Como Desarrollador Full Stack, he desempeñado un papel fundamental en la creación exitosa de diversos productos, asegurándome de abordar la escalabilidad y el mantenimiento tanto en el backend como en el frontend desde el inicio del proyecto. Con tres años de experiencia, he cultivado habilidades especializadas en tecnologías como React, Next.js y TypeScript. Mi enfoque se centra en la construcción de soluciones web eficientes y sostenibles.',
   },
   work: [
     {
       name: 'igloolab',
-      position: 'Full Stack Developer',
       url: 'https://igloolab.co',
-      summary:
-        'Igloolab is a digital agency that helps companies to build their digital products.',
-      startDate: 'Abr 2021',
       type: 'Remote',
+      location: {
+        city: 'Cali',
+        country: 'Colombia',
+      },
+      positions: [
+        {
+          name: 'Full Stack Web Developer',
+          startDate: 'Sep 2022',
+          summary:
+            'Estimación, creación y estructuración de proyectos web, logrando ser eficiente optimizando procesos, costos, entre otros.',
+        },
+        {
+          name: 'Web developer',
+          startDate: 'Sep 2021',
+          endDate: 'Sep 2022',
+          summary:
+            'React Js, Next Js, TypeScript, Node Js, PostgreSQL, Drupal.',
+        },
+        {
+          name: 'Web master',
+          startDate: 'Abr 2021',
+          endDate: 'Sep 2021',
+        },
+      ],
     },
     {
       name: 'Agencia Sima Digital',
-      position: 'Web Master',
       url: 'https://agenciasima.com',
-      startDate: 'May 2020',
-      endDate: 'Abr 2021',
       type: 'Freelance',
+      location: {
+        city: 'Cartagena',
+        country: 'Colombia',
+      },
+      positions: [
+        {
+          name: 'Web Master',
+          startDate: 'May 2020',
+          endDate: 'Abr 2021',
+        },
+      ],
     },
   ],
   education: [
@@ -71,6 +104,16 @@ export const RESUME: Resume = {
     'Node.js',
     'TypeScript',
     'PostgreSQL',
+    'Prisma ORM',
+    'Tailwind CSS',
+    'Drupal',
+    'Vercel',
+    'Firebase',
+    'Open Ai',
+    'Hono',
+    'Git',
+    'GitHub',
+    'GitLab',
   ],
   projects: [
     {

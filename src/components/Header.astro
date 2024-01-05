@@ -4,6 +4,8 @@ import { RESUME } from '../data/resume';
 import ButtonIcon from './ButtonIcon.astro';
 import Linkedin from './icons/Linkedin.astro';
 import Github from './icons/Github.astro';
+import Mail from './icons/Mail.astro';
+import X from './icons/X.astro';
 
 const { basics } = RESUME;
 ---
@@ -24,12 +26,19 @@ const { basics } = RESUME;
     </p>
 
     <ul class="flex flex-wrap gap-2">
+      <li>
+        <ButtonIcon href={`mailto:${basics.email}`}>
+          <Mail class="size-4" />
+        </ButtonIcon>
+      </li>
+
       {
         basics.profiles.map(({ url, network, username }) => (
           <li title={username}>
             <ButtonIcon href={url}>
               {network === 'LinkedIn' && <Linkedin class="size-4" />}
               {network === 'GitHub' && <Github class="size-4" />}
+              {network === 'X' && <X class="size-4" />}
             </ButtonIcon>
           </li>
         ))
@@ -38,7 +47,7 @@ const { basics } = RESUME;
   </div>
 
   <img
-    class="flex shrink-0 rounded-xl h-28 w-28"
+    class="hidden sm:flex shrink-0 rounded-xl h-28 w-28"
     src={basics.image}
     alt={`Foto de perfil de ${basics.name}`}
   />

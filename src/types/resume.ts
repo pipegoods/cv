@@ -4,12 +4,7 @@ interface Location {
 }
 
 interface Profile {
-  network:
-    | 'LinkedIn'
-    | 'GitHub'
-    | 'Twitter'
-    | 'Instagram'
-    | 'YouTube';
+  network: 'LinkedIn' | 'GitHub' | 'X';
   username: string;
   url: string;
 }
@@ -27,11 +22,9 @@ interface Basics {
 
 interface Work {
   name: string;
-  position: string;
   url: string;
-  startDate: string;
-  endDate?: string;
-  summary?: string;
+  positions: Position[];
+  location?: Location;
   type?:
     | 'Remote'
     | 'Freelance'
@@ -39,6 +32,13 @@ interface Work {
     | 'Part-time'
     | 'Contract'
     | 'Internship';
+}
+
+interface Position {
+  name: string;
+  startDate: string;
+  endDate?: string;
+  summary?: string;
 }
 
 interface Education {
