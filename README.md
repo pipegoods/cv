@@ -7,7 +7,7 @@ Componentes como Card o Chip de [Flowbite](https://flowbite.com/)
 
 ## Características
 - Construido con Astro, Tailwind CSS y TypeScript.
-- Archivo de configuración tipado según el estándar de resúmenes.
+- [Archivo de configuración](https://github.com/pipegoods/cv/blob/master/src/data/resume.ts) tipado según el estándar de resúmenes.
 - Diseño responsive.
 
 ## Desplegar en local
@@ -24,7 +24,7 @@ Luego, para ejecutar localmente:
 bunx --bun astro dev
 ```
 
-Finalmente, edita el archivo de configuración y agrega tus datos.
+Finalmente, edita el [Archivo de configuración](https://github.com/pipegoods/cv/blob/master/src/data/resume.ts) y agrega tus datos.
 
 ### ¿Cómo ejecutar si no tengo Bun?
 
@@ -38,7 +38,7 @@ Todas las opiniones o PR son bien recibidas.
 
 ## Desplegar tu CV
 
-Te recomiendo desplegar tu CV en Vercel, ya que está optimizado para Astro. Además, sugiero cambiar el `script de analíticas` en el `Layout.astro` y reemplazarlo con tu plataforma de analíticas preferida.
+Te recomiendo desplegar tu CV en Vercel, ya que está optimizado para Astro. Además, sugiero cambiar el `script de analíticas` en el [Layout.astro](https://github.com/pipegoods/cv/blob/master/src/layouts/Layout.astro) y reemplazarlo con tu plataforma de analíticas preferida.
 
 ## TODO
 - [ ] Modo oscuro
