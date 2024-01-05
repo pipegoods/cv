@@ -16,6 +16,13 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <script
+      defer
+      src="https://unpkg.com/@tinybirdco/flock.js"
+      data-host="https://api.us-east.tinybird.co"
+      data-token="p.eyJ1IjogImEyNjY5NzBmLWVkNDktNGQ4MS04ZDI4LWZhMDhjMGQ0YjkxNCIsICJpZCI6ICI5NWQxOWE5Yy0yYjQxLTRiZDItYjRkZC0wMWM4OTVlNjQ4MjAiLCAiaG9zdCI6ICJ1c19lYXN0In0.qNNMmwIIJCks_rYsD8JQ3gVPLop1WvjD8Cx-1zsj-cU"
+    ></script>
   </head>
   <body>
     <slot />
