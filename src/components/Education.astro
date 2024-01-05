@@ -21,7 +21,7 @@ const { education } = RESUME;
         }) => (
           <li>
             <article>
-              <div class="flex justify-between items-center">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 sm:mb-1">
                 <h3 class="text-lg font-semibold">
                   {url ? (
                     <a
@@ -37,13 +37,15 @@ const { education } = RESUME;
                   )}
                 </h3>
 
-                <span class="font-mono text-sm">
+                <time class="font-mono text-xs sm:text-sm">
                   {startDate} - {endDate ?? 'Presente'}
-                </span>
+                </time>
               </div>
 
-              <div class="flex justify-between items-center">
-                <p class="text-balance font-mono text-sm">{area}</p>
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                <p class="text-balance font-mono text-sm font-semibold">
+                  {area}
+                </p>
 
                 <span class="font-mono text-sm">
                   {studyType}
