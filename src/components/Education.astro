@@ -1,0 +1,68 @@
+---
+import { RESUME } from '../data/resume';
+
+const { education } = RESUME;
+---
+
+<section>
+  <h2 class="font-bold text-xl mb-3">Educación</h2>
+
+  <ul class="flex flex-col gap-5">
+    {
+      education.map(
+        ({
+          institution,
+          area,
+          endDate,
+          startDate,
+          studyType,
+          score,
+          url,
+        }) => (
+          <li>
+            <article>
+              <div class="flex justify-between items-center">
+                <h3 class="text-lg font-semibold">
+                  {url ? (
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                    >
+                      {institution}
+                    </a>
+                  ) : (
+                    institution
+                  )}
+                </h3>
+
+                <span class="font-mono text-sm">
+                  {startDate} - {endDate ?? 'Presente'}
+                </span>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <p class="text-balance font-mono text-sm">{area}</p>
+
+                <span class="font-mono text-sm">
+                  {studyType}
+
+                  {score && (
+                    <span
+                      class="font-semibold"
+                      title="Promedio ponderado"
+                    >
+                      {' '}
+                      ({score})
+                    </span>
+                  )}
+                </span>
+              </div>
+            </article>
+          </li>
+        )
+      )
+    }
+  </ul>
+</section>

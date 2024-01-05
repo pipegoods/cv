@@ -1,12 +1,26 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  href?: string;
+}
+
+const { title, description, href = '#' } = Astro.props;
+---
+
 <a
-  href="#"
-  class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg hover:bg-gray-100"
 >
   <h5 class="mb-2 font-bold tracking-tight text-gray-900">
-    Noteworthy technology acquisitions 2021
+    {title}
   </h5>
-  <p class="text-sm text-gray-700">
-    Here are the biggest enterprise technology acquisitions of 2021 so
-    far, in reverse chronological order.
-  </p>
+
+  {description && <p class="text-sm text-gray-700">{description}</p>}
+
+  <div class="mt-4">
+    <slot />
+  </div>
 </a>

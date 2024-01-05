@@ -1,110 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Globe from '../components/icons/Globe.astro';
-import Chip from '../components/Chip.astro';
 import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import About from '../components/About.astro';
+import Work from '../components/Work.astro';
+import Education from '../components/Education.astro';
+import Skills from '../components/Skills.astro';
+import Proyects from '../components/Proyects.astro';
+import Certificate from '../components/Certificate.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   <section
-    class="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6 py-16"
+    class="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6 py-16 flex flex-col gap-4"
   >
-    <section class="flex items-center justify-between">
-      <div class="flex-1">
-        <h1 class="font-bold text-2xl">Andres Vizcaino Salazar</h1>
-        <p>Full Stack Engineer, enfocado en el desarrollo web.</p>
-        <p class="flex items-center">
-          <Globe class="size-4 mr-2" />
-           Cartagena, Colombia
-        </p>
-        <p>Aqui van las redes sociales</p>
-      </div>
-
-      <img
-        class="flex shrink-0 rounded-xl h-28 w-28"
-        src="/photo-andres-vizcaino.webp"
-        alt="Foto de perfil de Andres Vizciano"
-      />
-    </section>
-
-    <section>
-      <h2 class="font-bold text-xl">About</h2>
-      <p>
-        Soy un desarrollador web con más de 5 años de experiencia en
-        el desarrollo de aplicaciones web, enfocado en el desarrollo
-        frontend, con conocimientos en el desarrollo backend.
-      </p>
-    </section>
-
-    <section>
-      <h2 class="font-bold text-xl">Work Experience</h2>
-
-      <article>
-        <div class="flex justify-between items-center">
-          <div class="flex items-center gap-2">
-            <h3 class="text-lg font-bold">igloolab</h3>
-            <Chip label="Remoto" />
-          </div>
-
-          <span> 2021 - Presente</span>
-        </div>
-
-        <h4 class="font-mono leading-none">
-          Full Stack Web Developer
-        </h4>
-
-        <p class="text-balance font-mono text-sm">
-          Desarrollo de aplicaciones web con React, Next.js, Node.js,
-          Express.js, MongoDB, GraphQL, Apollo, TailwindCSS, entre
-          otras tecnologías.
-        </p>
-      </article>
-    </section>
-
-    <section>
-      <h2 class="font-bold text-xl">Educación</h2>
-
-      <article>
-        <div class="flex justify-between items-center">
-          <h3 class="text-lg font-bold">Universidad de Cartagena</h3>
-
-          <span> 2016 - 2022</span>
-        </div>
-
-        <p class="text-balance font-mono text-sm">
-          Ingeniería de Sistemas
-        </p>
-      </article>
-    </section>
-
-    <section>
-      <h2 class="font-bold text-xl">Skills</h2>
-
-      <div class="flex flex-wrap gap-2">
-        {
-          [
-            'Javascript',
-            'Typescript',
-            'React',
-            'Next.js',
-            'Gatsby',
-            'Vue.js',
-            'Nuxt.js',
-            'Node.js',
-            'Express.js',
-            'MongoDB',
-            'GraphQL',
-          ].map((skill) => <Chip label={skill} />)
-        }
-      </div>
-    </section>
-
-    <section>
-      <h2 class="font-bold text-xl">Proyectos</h2>
-
-      <div class="grid grid-cols-2 gap-4">
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((project) => <Card />)}
-      </div>
-    </section>
+    <Header />
+    <About />
+    <Work />
+    <Education />
+    <Skills />
+    <Proyects />
+    <Certificate />
   </section>
 </Layout>

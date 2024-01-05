@@ -1,0 +1,45 @@
+---
+import Globe from './icons/Globe.astro';
+import { RESUME } from '../data/resume';
+import ButtonIcon from './ButtonIcon.astro';
+import Linkedin from './icons/Linkedin.astro';
+import Github from './icons/Github.astro';
+
+const { basics } = RESUME;
+---
+
+<section class="flex items-center justify-between">
+  <div class="flex-1">
+    <h1 class="font-bold text-2xl hover:underline mb-3">
+      <a href={basics.url} target="_blank" rel="noopener noreferrer">
+        {basics.name}
+      </a>
+    </h1>
+
+    <p class="mb-2">{basics.label}</p>
+
+    <p class="flex items-center mb-2">
+      <Globe class="size-4 mr-2" />
+      {basics.location.city}, {basics.location.country}
+    </p>
+
+    <ul class="flex flex-wrap gap-2">
+      {
+        basics.profiles.map(({ url, network, username }) => (
+          <li title={username}>
+            <ButtonIcon href={url}>
+              {network === 'LinkedIn' && <Linkedin class="size-4" />}
+              {network === 'GitHub' && <Github class="size-4" />}
+            </ButtonIcon>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <img
+    class="flex shrink-0 rounded-xl h-28 w-28"
+    src={basics.image}
+    alt={`Foto de perfil de ${basics.name}`}
+  />
+</section>

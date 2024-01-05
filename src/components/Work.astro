@@ -1,0 +1,59 @@
+---
+import Chip from './Chip.astro';
+
+import { RESUME } from '../data/resume';
+
+const { work } = RESUME;
+---
+
+<section>
+  <h2 class="font-bold text-xl mb-3">Work Experience</h2>
+
+  <ul class="flex flex-col gap-5">
+    {
+      work.map(
+        ({
+          startDate,
+          endDate,
+          position,
+          summary,
+          type,
+          name,
+          url,
+        }) => (
+          <li>
+            <article>
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-2">
+                  <h3 class="text-lg font-semibold">
+                    {url ? (
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:underline"
+                      >
+                        {name}
+                      </a>
+                    ) : (
+                      name
+                    )}
+                  </h3>
+                  {type && <Chip label={type} />}
+                </div>
+
+                <span class="font-mono text-sm">
+                  {startDate} - {endDate ?? 'Presente'}
+                </span>
+              </div>
+
+              <h4 class="font-mono leading-none mb-1">{position}</h4>
+
+              {summary && <p class=" font-mono text-sm">{summary}</p>}
+            </article>
+          </li>
+        )
+      )
+    }
+  </ul>
+</section>

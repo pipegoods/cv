@@ -1,0 +1,27 @@
+---
+import Card from './Card.astro';
+import { RESUME } from '../data/resume';
+import Chip from './Chip.astro';
+
+const { projects } = RESUME;
+---
+
+<section>
+  <h2 class="font-bold text-xl mb-3">Proyectos</h2>
+
+  <div class="grid grid-cols-2 gap-4">
+    {
+      projects.map(({ url, name, description, technologies }) => (
+        <Card title={name} description={description} href={url}>
+          <ul class="flex gap-1 flex-wrap">
+            {technologies.map((tech) => (
+              <li>
+                <Chip label={tech} size="small" />
+              </li>
+            ))}
+          </ul>
+        </Card>
+      ))
+    }
+  </div>
+</section>
